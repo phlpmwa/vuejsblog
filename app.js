@@ -6,16 +6,13 @@ new Vue({
      y:0
     },
     methods:{
-        add:function(inc)
+        LogName:function()
         {
-            this.age+=inc;
+            console.log('you entered your name');
         },
-        subtract:function(dec)
+        logAge:function()
         {
-this.age-=dec;
+            console.log('you entered your age');
         }
-         }
-    
-   
-    
-})
+        }
+        });
