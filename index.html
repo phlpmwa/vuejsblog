@@ -10,16 +10,17 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>Looping</h1>
-        <ul>
-            <li v-for="character in characters">{{character}}</li>
-        </ul>
-
-        <ul>
-            <li v-for="(ninja,index) in ninjas">
-            {{index}}. {{ninja.name}}---{{ninja.age}}
-            </li>
-        </ul>
+        <!--bag image-->
+        <div id="bag" v-bind:class="{burst:ended}"></div>
+        <!-- Bag health-->
+        <div id="bag-health">
+            <div v-bind:style="{ width:health+'%'}"></div>
+        </div>
+        <!-- game controls-->
+        <div id="controls--">
+ <button v-on:click="punch" v-show="!ended">Punch</button>
+ <button v-on:click="restart">Restart</button>
+        </div>
     </div>
     <script src="app.js"> 
     
